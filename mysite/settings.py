@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls',
     'channels',
+    "django_nextjs",
 ]
 
 MIDDLEWARE = [

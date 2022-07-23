@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 from django.conf import settings
+from polls.views import jobs
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'favicon.ico')),
+    path('vercel.svg', RedirectView.as_view(url=settings.STATIC_URL + 'vercel.svg')),
+    path('', jobs, name='jobs'),
+    path("", include("django_nextjs.urls"))
 ]
