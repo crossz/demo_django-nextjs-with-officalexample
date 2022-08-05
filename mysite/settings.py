@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-=idb9_mw)iml(^nw04ofwgr+cv1ur$!n$_6j8ku=oe=82p13yj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.8.120']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.8.120', '192.168.8.195']
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'unsafe-none'
+# SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin' # Django default
+# SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 # Application definition
 
